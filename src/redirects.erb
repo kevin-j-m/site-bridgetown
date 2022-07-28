@@ -1,0 +1,10 @@
+---
+permalink: /_redirects
+---
+
+# Redirects from what the browser requests to what we serve
+<% collections.posts.resources.each do |post| %>
+<% post.data.aliases.each do |alias_name| %>
+<%= alias_name %> <%= post.relative_url %>
+<% end if post.data.aliases %>
+<% end %>
