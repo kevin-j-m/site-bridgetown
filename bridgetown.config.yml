@@ -17,18 +17,14 @@
 # https://learnxinyminutes.com/docs/yaml/
 #
 
-url: "" # the base hostname & protocol for your site, e.g. https://example.com
-
-permalink: pretty
+url: "https://kevinjmurphy.com" # the base hostname & protocol for your site, e.g. https://example.com
+permalink: "/:path.*"
 template_engine: erb
+timezone: America/New_York
 
-# Other options you might want to investigate:
-#
-# base_path: "/" # the subpath of your site, e.g. /blog. If you set this option,
-# ensure you use the `relative_url` helper for all links and assets in your HTML.
-# If you're using esbuild for frontend assets, edit `esbuild.config.js` to
-# update `publicPath`.
+collections:
+  posts:
+    permalink: /:collection/:path.*
 
-# timezone: America/Los_Angeles
-# pagination:
-#   enabled: true
+pagination:
+  enabled: true
