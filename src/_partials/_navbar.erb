@@ -1,0 +1,9 @@
+<nav class="flex justify-end">
+  <ul class="flex items-center space-x-4">
+    <% nav_items.each do |nav| %>
+      <li class="flex items-center">
+        <a href="<%= nav.href %>" class="text-gray-600 hover:text-gray-900"><%= nav.title %></a>
+      </li>
+    <% end %>
+  </ul>
+</nav>

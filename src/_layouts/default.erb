@@ -3,7 +3,9 @@
   <head>
     <%= render "head", metadata: site.metadata, title: resource.data.title %>
   </head>
-  <body class="<%= resource.data.layout %> <%= resource.data.page_class %>">
+  <body class="max-w-prose mx-auto">
+    <%= render "header", author: site.metadata.author %>
+    <%= render "navbar", nav_items: site.data.nav.navbar %>
     <main>
       <%= yield %>
     </main>

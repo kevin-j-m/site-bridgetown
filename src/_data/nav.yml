@@ -1,0 +1,9 @@
+navbar:
+  - title: Home
+    href: /
+  - title: About
+    href: /about/
+  - title: Speaking
+    href: /speaking/
+  - title: Newlsetter
+    href: https://newsletter.kevinjmurphy.com/
