@@ -1,0 +1,6 @@
+<% collections.posts.resources.each do |post| %>
+  <article>
+    <%= render Post::HeaderComponent.new(post) %>
+    <p><%= post.data.description %></p>
+  </article>
+<% end %>
