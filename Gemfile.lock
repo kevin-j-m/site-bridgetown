@@ -53,6 +53,9 @@ GEM
       bridgetown-core (= 1.1.0)
     bridgetown-seo-tag (5.0.0)
       bridgetown (>= 0.20.0, < 2.0)
+    bridgetown-svg-inliner (1.0.2)
+      bridgetown (>= 0.20, < 2.0)
+      nokogiri
     bridgetown-view-component (1.0.0)
       actionview (>= 6.0)
       bridgetown (>= 1.0.0.beta3, < 2.0)
@@ -152,6 +155,7 @@ DEPENDENCIES
   bridgetown (~> 1.1.0)
   bridgetown-feed (~> 2.1.0)
   bridgetown-seo-tag (~> 5.0.0)
+  bridgetown-svg-inliner (~> 1.0.2)
   bridgetown-view-component (~> 1.0.0)
   puma (~> 5.6)
   view_component (~> 2.57.1)

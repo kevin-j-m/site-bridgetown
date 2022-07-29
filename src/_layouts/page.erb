@@ -9,3 +9,8 @@ layout: default
 <% end %>
 
 <%= render MarkdownComponent.new.with_content(content) %>
+
+<% if resource.try(:collection)&.label == "posts" %>
+  <%= resource.previous_doc.relative_url if resource.previous_doc %>
+  <%= resource.next_doc.relative_url if resource.next_doc %>
+<% end %>

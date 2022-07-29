@@ -2,5 +2,17 @@
   <h1 class="text-3xl lg:text-4xl font-semibold"><%= author.name %></h1>
   <div class="flex justify-between items-center">
     <p><%= author.title %></p>
+    <div class="flex space-x-2">
+        <a href="#" class="text-gray-400 hover:text-gray-300">
+          <span class="sr-only">Twitter</span>
+          <%= svg "/images/icons/twitter.svg", class: "text-[#1DA1F2]"%>
+
+        </a>
+
+        <a href="#" class="text-gray-400 hover:text-gray-300">
+          <span class="sr-only">GitHub</span>
+          <%= svg "/images/icons/github.svg" %>
+        </a>
+    </div>
   </div>
 </header>
