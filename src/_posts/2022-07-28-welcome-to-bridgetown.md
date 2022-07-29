@@ -3,6 +3,9 @@ title:  "Your First Post on Bridgetown"
 description: "The description of this post"
 date:   2022-07-28 16:09:35 -0700
 categories: updates
+tags:
+  - "foo"
+  - "bar"
 aliases:
   - /foo
 ---

@@ -5,9 +5,9 @@
   <div class="flex flex-col">
     <%= date %>
     <% if data.tags.any? %>
-      <div class="flex">
-        <%= data.tags.each do |tag| %>
-          <a class="" href="/tags/<%= tag %>"><%= tag %></a>
+      <div class="flex space-x-4">
+        <% data.tags.each do |tag| %>
+          <a class="underline" href="/tags/<%= tag %>"><%= tag %></a>
         <% end %>
       </div>
     <% end %>
