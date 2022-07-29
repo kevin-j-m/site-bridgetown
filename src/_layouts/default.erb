@@ -4,11 +4,15 @@
     <%= render "head", metadata: site.metadata, title: resource.data.title %>
   </head>
   <body class="max-w-prose mx-auto">
-    <%= render "header", author: site.metadata.author %>
-    <%= render "navbar", nav_items: site.data.nav.navbar %>
-    <main>
-      <%= yield %>
-    </main>
-    <%= render "footer", metadata: site.metadata %>
+    <div class="grid grid-rows-[auto_1fr_auto] min-h-screen">
+      <div class="pt-12">
+      <%= render "header", author: site.metadata.author %>
+      <%= render "navbar", nav_items: site.data.nav.navbar %>
+      </div>
+      <main>
+        <%= yield %>
+      </main>
+      <%= render "footer", metadata: site.metadata %>
+    </div>
   </body>
 </html>

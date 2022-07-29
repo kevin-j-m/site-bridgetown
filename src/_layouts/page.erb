@@ -2,6 +2,10 @@
 layout: default
 ---
 
-<h2 class="text-xl mb-5"><%= resource.data.title %></h2>
+<% if resource.try(:collection)&.label == "posts" %>
+  <%= render Post::HeaderComponent.new(resource) %>
+<% else %>
+  <h2 class="text-xl mb-5"><%= resource.data.title %></h2>
+<% end %>
 
 <%= render MarkdownComponent.new.with_content(content) %>
