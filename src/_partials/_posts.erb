@@ -1,6 +1,21 @@
-<% collections.posts.resources.each do |post| %>
+<% paginator.resources.each do |post| %>
   <article>
     <%= render Post::HeaderComponent.new(post) %>
     <p><%= post.data.description %></p>
   </article>
+<% end %>
+
+<% if paginator.total_pages > 1 %>
+  <ul class="flex">
+  <% if paginator.previous_page %>
+    <li>
+      <%= link_to "Previous Page", paginator.previous_page_path, class: "font-bold text-blue-600" %>
+    </li>
+  <% end %>
+  <% if paginator.next_page %>
+    <li>
+      <%= link_to "Next Page", paginator.next_page_path, class: "font-bold text-blue-600" %>
+    </li>
+  <% end %>
+</ul>
 <% end %>

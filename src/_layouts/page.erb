@@ -2,6 +2,6 @@
 layout: default
 ---
 
-<h1><%= resource.data.title %></h1>
+<h2 class="text-xl mb-5"><%= resource.data.title %></h2>
 
-<%= yield %>
+<%= render MarkdownComponent.new.with_content(content) %>
